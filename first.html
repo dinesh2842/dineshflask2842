@@ -1,0 +1,34 @@
+<html>
+		<head>
+			<title>LIBRARY</title>
+		</head>
+         <body>
+			<h1>LIBRARY</h1>
+			<br><br>
+			<h1><a href="/form">CREATE TASK</a><h1>
+			
+			<table border="1"align="center">
+				<tr>
+					<th>Bookname</th>
+					<th>Author</th>
+					<th>Recievingdate</th>
+					<th>Returndate</th>
+					<th>Studentname</th>
+					<th>Edit</th>
+					<th>Delete</th> 
+				</tr>
+				{%for x in d: %}
+				<tr>
+						<td>{{x.1}}</td>
+						<td>{{x.2}}</td>
+						<td>{{x.3}}</td>
+						<td>{{x.4}}</td>
+						<td>{{x.5}}</td>		
+						<td><a href="/edit/{{x.0}}">Edit</a></td>
+						<td><a href="/delete/{{x.0}}">Delete</a></td>
+				</tr> 
+				{% endfor %}
+			</table>
+		</body>
+
+</html>
